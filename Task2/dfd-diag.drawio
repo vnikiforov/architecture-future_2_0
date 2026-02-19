@@ -1,0 +1,314 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram name="Data Flow между доменами" id="DFD-2026">
+    <mxGraphModel dx="3321" dy="3196" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Data Flow Diagram: Потоки данных между доменами" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=20;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="-30" y="-1080" width="500" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="actor_doctor" target="clinic_crm">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="70" y="-820" />
+              <mxPoint x="70" y="-450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-2" value="&lt;span style=&quot;color: rgb(249, 250, 251); font-family: quote-cjk-patch, Inter, system-ui, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Open Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; text-wrap-mode: wrap; background-color: rgb(21, 21, 23);&quot;&gt;Запись данных осмотра, назначений, открытие/закрытие приёма&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="qcTEK8QZUbmk6-VrFHh8-1">
+          <mxGeometry x="-0.1139" relative="1" as="geometry">
+            <mxPoint x="5" y="24" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="actor_doctor" target="clinic_mis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-4" value="&lt;span style=&quot;color: rgb(249, 250, 251); font-family: quote-cjk-patch, Inter, system-ui, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Open Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(21, 21, 23); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Отметка об использовании расходных материалов, запрос на обслуживание оборудования, отметка о начале/окончании смены&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="qcTEK8QZUbmk6-VrFHh8-3">
+          <mxGeometry x="-0.1315" y="-15" relative="1" as="geometry">
+            <mxPoint x="-10" y="-41" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="actor_doctor" value="Врач / Оператор" style="shape=umlActor;verticalLabelPosition=bottom;labelBackgroundColor=none;verticalAlign=top;align=center;html=1;outlineConnect=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="-130" y="-850" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_patient" value="Пациент" style="shape=umlActor;verticalLabelPosition=bottom;labelBackgroundColor=none;verticalAlign=top;align=center;html=1;outlineConnect=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="205" y="-830" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_analyst" value="Аналитик" style="shape=umlActor;verticalLabelPosition=bottom;labelBackgroundColor=none;verticalAlign=top;align=center;html=1;outlineConnect=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="350" y="120" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="domain_clinic" value="Домен&lt;br&gt;&lt;b&gt;Клиники&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=60;horizontal=0;fontSize=16;strokeColor=#d79b00;fillColor=#ffe6cc;fontColor=#404040;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="-160" y="-470" width="540" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="clinic_crm" value="ЭМК / CRM&lt;br&gt;(Пациенты, приёмы)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontColor=#404040;" parent="domain_clinic" vertex="1">
+          <mxGeometry x="310" y="90" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="clinic_mis" value="MIS&lt;br&gt;(Персонал, инвентарь)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontColor=#404040;" parent="domain_clinic" vertex="1">
+          <mxGeometry x="100" y="270" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="domain_fintech" value="Домен&lt;br&gt;&lt;b&gt;Финтех (Банк)&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=60;horizontal=0;fontSize=16;strokeColor=#82b366;fillColor=#d5e8d4;fontColor=#404040;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="860" y="-1240" width="530" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="fintech_core" value="Core Banking&lt;br&gt;(Счета, кредиты)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontColor=#404040;" parent="domain_fintech" vertex="1">
+          <mxGeometry x="310" y="20" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fintech_processing" value="Платежный шлюз" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontColor=#404040;" parent="domain_fintech" vertex="1">
+          <mxGeometry x="150" y="240" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.698;entryY=0.962;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;" edge="1" parent="domain_fintech" source="fintech_processing" target="fintech_core">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-11" value="&lt;span style=&quot;color: rgb(249, 250, 251); font-family: quote-cjk-patch, Inter, system-ui, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Open Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; text-wrap-mode: wrap; background-color: rgb(21, 21, 23);&quot;&gt;Фиксация факта успешной/неуспешной транзакции, обновление статуса счета&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;" vertex="1" connectable="0" parent="qcTEK8QZUbmk6-VrFHh8-10">
+          <mxGeometry x="0.0685" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="domain_ai" value="Домен&lt;br&gt;&lt;b&gt;ИИ-сервисы&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=60;horizontal=0;fontSize=16;strokeColor=#6c8ebf;fillColor=#dae8fc;fontColor=#404040;cloneable=1;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="1140" y="-810" width="420" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="ai_models" value="Модели диагностики&lt;br&gt;(Python)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontColor=#404040;" parent="domain_ai" vertex="1">
+          <mxGeometry x="120" y="40" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ai_dicom" value="Хранилище снимков&lt;br&gt;(DICOM)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontColor=#404040;" parent="domain_ai" vertex="1">
+          <mxGeometry x="129" y="220" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="historical_dwh" value="Исторический слой&lt;br&gt;(Raw DWH)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;fontColor=#404040;" parent="1" vertex="1">
+          <mxGeometry x="790" y="105" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;" edge="1" parent="1" source="integration_bus" target="clinic_mis">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="30" y="-50" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-9" value="&lt;span style=&quot;color: rgb(249, 250, 251); font-family: quote-cjk-patch, Inter, system-ui, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Open Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; text-wrap-mode: wrap; background-color: rgb(21, 21, 23);&quot;&gt;Получение нормативно-справочной информации из мастер-системы&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;" vertex="1" connectable="0" parent="qcTEK8QZUbmk6-VrFHh8-8">
+          <mxGeometry x="-0.1405" y="-15" relative="1" as="geometry">
+            <mxPoint x="-90" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="integration_bus" value="Облачная шина&lt;br&gt;(Kafka / API Gateway)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;fontColor=#404040;" parent="1" vertex="1">
+          <mxGeometry x="500" y="-160" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="domain_pharma" target="domain_fintech">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2040" y="-210" />
+              <mxPoint x="2040" y="-1065" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-34" value="Кредитные линии для закупщиков" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="qcTEK8QZUbmk6-VrFHh8-33">
+          <mxGeometry x="-0.0853" y="31" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="domain_pharma" value="Домен&lt;br&gt;&lt;b&gt;Фарма&lt;/b&gt;&lt;br&gt;(будущий)" style="swimlane;whiteSpace=wrap;html=1;startSize=60;horizontal=0;fontSize=16;strokeColor=#a64d79;fillColor=#ead1dc;dashed=1;fontColor=#404040;swimlaneLine=1;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="1250" y="-350" width="630" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-26" value="&lt;div style=&quot;&quot;&gt;&lt;font face=&quot;quote-cjk-patch, Inter, system-ui, -apple-system, system-ui, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif&quot; color=&quot;#404040&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;ERP производителя&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6D0DE;strokeColor=#666666;fontSize=14;fontColor=#404040;align=center;" vertex="1" parent="domain_pharma">
+          <mxGeometry x="80" y="20" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="domain_pharma" source="qcTEK8QZUbmk6-VrFHh8-27" target="qcTEK8QZUbmk6-VrFHh8-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-27" value="&lt;div style=&quot;&quot;&gt;&lt;font face=&quot;quote-cjk-patch, Inter, system-ui, -apple-system, system-ui, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif&quot; color=&quot;#404040&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Система контроля качества (QC)&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6D0DE;strokeColor=#666666;fontSize=14;fontColor=#404040;align=center;" vertex="1" parent="domain_pharma">
+          <mxGeometry x="90" y="170" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="domain_pharma" source="qcTEK8QZUbmk6-VrFHh8-28" target="qcTEK8QZUbmk6-VrFHh8-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-28" value="&lt;div style=&quot;&quot;&gt;&lt;font face=&quot;quote-cjk-patch, Inter, system-ui, -apple-system, system-ui, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif&quot; color=&quot;#404040&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Складское хозяйство (WMS)&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6D0DE;strokeColor=#666666;fontSize=14;fontColor=#404040;align=center;" vertex="1" parent="domain_pharma">
+          <mxGeometry x="320" y="20" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="domain_pharma" source="qcTEK8QZUbmk6-VrFHh8-29" target="qcTEK8QZUbmk6-VrFHh8-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-29" value="&lt;div style=&quot;&quot;&gt;&lt;font face=&quot;quote-cjk-patch, Inter, system-ui, -apple-system, system-ui, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif&quot; color=&quot;#404040&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;CRM / B2B-портал&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6D0DE;strokeColor=#666666;fontSize=14;fontColor=#404040;align=center;" vertex="1" parent="domain_pharma">
+          <mxGeometry x="370" y="160" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="domain_electronics" target="integration_bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="-10" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="930" y="300" />
+              <mxPoint x="930" y="450" />
+              <mxPoint x="580" y="450" />
+              <mxPoint x="580" y="200" />
+              <mxPoint x="620" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-20" value="&lt;ul style=&quot;margin: 4px 0px 0px; padding-left: 18px; color: rgb(249, 250, 251); font-family: quote-cjk-patch, Inter, system-ui, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Open Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; text-wrap-mode: wrap; background-color: rgb(21, 21, 23);&quot;&gt;&lt;li&gt;&lt;p style=&quot;margin-top: 0px !important; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;&quot; class=&quot;ds-markdown-paragraph&quot;&gt;Публикация событий о критических сбоях оборудования.&lt;/p&gt;&lt;/li&gt;&lt;li style=&quot;margin-top: 6px;&quot;&gt;&lt;p style=&quot;margin-top: 0px !important; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;&quot; class=&quot;ds-markdown-paragraph&quot;&gt;Публикация данных о необходимости техобслуживания.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="qcTEK8QZUbmk6-VrFHh8-19">
+          <mxGeometry x="-0.1197" y="-8" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="domain_electronics" value="Домен&lt;br&gt;&lt;b&gt;Электроника&lt;/b&gt;&lt;br&gt;(будущий)" style="swimlane;whiteSpace=wrap;html=1;startSize=60;horizontal=0;fontSize=16;strokeColor=#a64d79;fillColor=#ead1dc;dashed=1;fontColor=#404040;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="1120" y="180" width="690" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="domain_electronics" source="qcTEK8QZUbmk6-VrFHh8-16" target="qcTEK8QZUbmk6-VrFHh8-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-16" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 16px;&quot;&gt;&lt;font face=&quot;quote-cjk-patch, Inter, system-ui, -apple-system, system-ui, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif&quot; color=&quot;#404040&quot;&gt;&lt;b&gt;Сервис гарантийного обслуживания&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6D0DE;strokeColor=#666666;fontSize=14;fontColor=#404040;align=center;" vertex="1" parent="domain_electronics">
+          <mxGeometry x="390" y="150" width="235" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="domain_electronics" source="qcTEK8QZUbmk6-VrFHh8-17" target="qcTEK8QZUbmk6-VrFHh8-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-17" value="&lt;div style=&quot;&quot;&gt;&lt;font face=&quot;quote-cjk-patch, Inter, system-ui, -apple-system, system-ui, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif&quot; color=&quot;#404040&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;CRM для B2B-клиентов&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6D0DE;strokeColor=#666666;fontSize=14;fontColor=#404040;align=center;" vertex="1" parent="domain_electronics">
+          <mxGeometry x="71" y="150" width="235" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-18" value="&lt;div style=&quot;&quot;&gt;&lt;font face=&quot;quote-cjk-patch, Inter, system-ui, -apple-system, system-ui, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif&quot; color=&quot;#404040&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;ERP-система производства&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6D0DE;strokeColor=#666666;fontSize=14;fontColor=#404040;align=center;" vertex="1" parent="domain_electronics">
+          <mxGeometry x="91" y="20" width="169" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="domain_electronics" source="qcTEK8QZUbmk6-VrFHh8-35" target="qcTEK8QZUbmk6-VrFHh8-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-35" value="&lt;div style=&quot;&quot;&gt;&lt;font face=&quot;quote-cjk-patch, Inter, system-ui, -apple-system, system-ui, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif&quot; color=&quot;#404040&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Склад готовой продукции&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6D0DE;strokeColor=#666666;fontSize=14;fontColor=#404040;align=center;" vertex="1" parent="domain_electronics">
+          <mxGeometry x="350" y="30" width="235" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_patient1" value="1. Запись на приём" parent="1" source="actor_patient" target="clinic_crm" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_patient2" value="2. Данные пациента" style="edgeStyle=orthogonalEdgeStyle;curved=1;" parent="1" source="clinic_crm" target="integration_bus" edge="1">
+          <mxGeometry x="-0.1628" y="-40" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="570" y="-360" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_patient3" value="3. ID пациента для выставления счета" style="entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" source="integration_bus" target="fintech_processing" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="-440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_patient4" value="4. Ссылка на оплату" style="edgeStyle=orthogonalEdgeStyle;curved=1;entryX=1;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="fintech_core" target="actor_patient" edge="1">
+          <mxGeometry x="0.0007" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="730" y="-980" />
+              <mxPoint x="380" y="-980" />
+              <mxPoint x="380" y="-810" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note_patient" value="Бизнес-сценарий: Пациент записался в клинику и оплатил приём через банк" style="shape=note;whiteSpace=wrap;html=1;background=none;align=left;fontStyle=1;fillColor=#fff2cc;fontColor=#404040;" parent="1" vertex="1">
+          <mxGeometry x="-161" y="-520" width="380" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_ai1" value="1. Снимок МРТ" parent="1" source="clinic_crm" target="ai_dicom" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="690" y="-410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_ai2" value="2. Запрос на анализ" parent="1" source="ai_dicom" target="ai_models" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_ai3" value="3. Результат диагностики" parent="1" source="ai_models" target="clinic_crm" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="-560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note_ai" value="Бизнес-сценарий: Врач направляет снимок в ИИ и получает предварительный диагноз" style="shape=note;whiteSpace=wrap;html=1;background=none;align=left;fontStyle=1;fillColor=#dae8fc;fontColor=#404040;" parent="1" vertex="1">
+          <mxGeometry x="1140" y="-860" width="350" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_analytics1" value="Запрос отчета" parent="1" source="actor_analyst" target="integration_bus" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_analytics2" value="Агрегированные данные из доменов" parent="1" source="integration_bus" target="actor_analyst" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_pharma1" value="Данные о назначениях лекарств" style="edgeStyle=orthogonalEdgeStyle;curved=1;" parent="1" source="clinic_crm" target="integration_bus" edge="1">
+          <mxGeometry x="-0.1739" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="-340" />
+              <mxPoint x="450" y="-210" />
+              <mxPoint x="620" y="-210" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow_pharma2" value="Подписка на назначения" style="entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=1;" parent="1" source="integration_bus" target="qcTEK8QZUbmk6-VrFHh8-26" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1000" y="-105" />
+              <mxPoint x="1000" y="-250" />
+              <mxPoint x="1330" y="-250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note_pharma" value="Сценарий: Фарма - производство препаратов на основе статистики назначений" style="shape=note;whiteSpace=wrap;html=1;background=none;align=left;fontStyle=1;fillColor=#ead1dc;fontColor=#404040;" parent="1" vertex="1">
+          <mxGeometry x="1250" y="-400" width="380" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_hist1" value="События на запись (CDC)" parent="1" source="integration_bus" target="historical_dwh" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_hist2" value="Восстановление / Аудит" parent="1" source="historical_dwh" target="integration_bus" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="clinic_mis" target="integration_bus">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="30" y="-250" />
+              <mxPoint x="310" y="-250" />
+              <mxPoint x="310" y="-133" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-6" value="&lt;ul style=&quot;margin: 4px 0px 0px; padding-left: 18px; color: rgb(249, 250, 251); font-family: quote-cjk-patch, Inter, system-ui, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Open Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; text-wrap-mode: wrap; background-color: rgb(21, 21, 23);&quot;&gt;&lt;li&gt;&lt;p class=&quot;ds-markdown-paragraph&quot; style=&quot;margin-top: 0px !important; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;&quot;&gt;Публикация событий о движении ТМЦ&lt;/p&gt;&lt;/li&gt;&lt;li style=&quot;margin-top: 6px;&quot;&gt;&lt;p class=&quot;ds-markdown-paragraph&quot; style=&quot;margin-top: 0px !important; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;&quot;&gt;Публикация данных о загрузке оборудования&lt;/p&gt;&lt;/li&gt;&lt;li style=&quot;margin-top: 6px;&quot;&gt;&lt;p class=&quot;ds-markdown-paragraph&quot; style=&quot;margin-top: 0px !important; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;&quot;&gt;Публикация смен персонала&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;" vertex="1" connectable="0" parent="qcTEK8QZUbmk6-VrFHh8-5">
+          <mxGeometry x="-0.1725" y="-25" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="fintech_processing" target="integration_bus">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-13" value="&lt;span style=&quot;color: rgb(249, 250, 251); font-family: quote-cjk-patch, Inter, system-ui, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Open Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; text-wrap-mode: wrap; background-color: rgb(21, 21, 23);&quot;&gt;Публикация события об оплате&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="qcTEK8QZUbmk6-VrFHh8-12">
+          <mxGeometry x="0.4382" y="-25" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="fintech_processing" target="actor_patient">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="690" y="-780" />
+              <mxPoint x="690" y="-640" />
+              <mxPoint x="470" y="-640" />
+              <mxPoint x="470" y="-800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-15" value="&lt;span style=&quot;color: rgb(249, 250, 251); font-family: quote-cjk-patch, Inter, system-ui, -apple-system, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Open Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; text-wrap-mode: wrap; background-color: rgb(21, 21, 23);&quot;&gt;Отправка ссылки на оплату (push-уведомление, СМС)&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="qcTEK8QZUbmk6-VrFHh8-14">
+          <mxGeometry x="0.1626" y="-20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;curved=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="clinic_mis" target="domain_electronics">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-15" y="80" />
+              <mxPoint y="80" />
+              <mxPoint y="370" />
+              <mxPoint x="470" y="370" />
+              <mxPoint x="470" y="570" />
+              <mxPoint x="1341" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-23" value="Бизнес-сценарий:&amp;nbsp;Кредитование пациентов на лечение" style="shape=note;whiteSpace=wrap;html=1;background=none;align=left;fontStyle=1;fillColor=#E9FFEA;fontColor=#404040;" vertex="1" parent="1">
+          <mxGeometry x="860" y="-1300" width="530" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qcTEK8QZUbmk6-VrFHh8-25" value="Сценарий:&amp;nbsp;Производитель электроники получает заказ от клиники с использованием кредитной линии банка" style="shape=note;whiteSpace=wrap;html=1;background=none;align=left;fontStyle=1;fillColor=#ead1dc;fontColor=#404040;" vertex="1" parent="1">
+          <mxGeometry x="1169" y="110" width="461" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
