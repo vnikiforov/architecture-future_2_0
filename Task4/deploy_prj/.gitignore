@@ -1,0 +1,6 @@
+# Temp files
+.mock/
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+tfplan
