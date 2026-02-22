@@ -1,0 +1,125 @@
+{
+    "basePath": "/",
+    "baseUrl": "",
+    "editUrl": "",
+    "logoFile": "logo.png",
+    "jsFile": "",
+    "toggles": {
+      "showChart": true,
+      "showTagFilter": true,
+      "showQuadrantList": true,
+      "showEmptyRings": false
+    },
+    "sections": ["radar", "tags", "list"],
+    "colors": {
+      "foreground": "#fcf2e6",
+      "background": "#808080",
+      "highlight": "#d4a373",
+      "content": "#fff",
+      "text": "#575757",
+      "link": "#bc6c25",
+      "border": "rgba(255, 255, 255, 0.1)",
+      "tag": "rgba(255, 255, 255, 0.1)"
+    },
+    "quadrants": [
+      {
+        "id": "languages-and-frameworks",
+        "title": "Языки и Фреймворки",
+        "description": "Технологии написания кода",
+        "color": "#6a994e"
+      },
+      {
+        "id": "methods-and-patterns",
+        "title": "Практики и Паттерны",
+        "description": "Подходы к проектированию и разработке",
+        "color": "#e9c46a"
+      },
+      {
+        "id": "platforms-and-operations",
+        "title": "Платформы и Инфраструктура",
+        "description": "Среды выполнения и облачные сервисы",
+        "color": "#f4a261"
+      },
+      {
+        "id": "tools",
+        "title": "Инструменты",
+        "description": "BI, оркестрация, управление данными",
+        "color": "#e76f51"
+      }
+    ],
+    "rings": [
+      {
+        "id": "adopt",
+        "title": "Активно используем",
+        "description": "Рекомендовано для всех новых проектов",
+        "color": "#2a9d8f",
+        "radius": 0.5,
+        "strokeWidth": 5
+      },
+      {
+        "id": "trial",
+        "title": "Пилотируем",
+        "description": "Внедряем в ограниченном количестве проектов",
+        "color": "#e9c46a",
+        "radius": 0.69,
+        "strokeWidth": 3
+      },
+      {
+        "id": "assess",
+        "title": "Изучаем",
+        "description": "Стоит попробовать, изучаем применимость",
+        "color": "#f4a261",
+        "radius": 0.85,
+        "strokeWidth": 2
+      },
+      {
+        "id": "hold",
+        "title": "Устарело",
+        "description": "Не рекомендуется к использованию, планируется замена",
+        "color": "#e76f51",
+        "radius": 1,
+        "strokeWidth": 0.75
+      }
+    ],
+    "flags": {
+      "new": {
+        "color": "#f1235a",
+        "title": "Новое",
+        "titleShort": "N",
+        "description": "Новое в этой версии"
+      },
+      "changed": {
+        "color": "#40a7d1",
+        "title": "Изменено",
+        "titleShort": "C",
+        "description": "Недавно менялось"
+      },
+      "default": {
+        "description": "Нет изменений"
+      }
+    },
+    "chart": {
+      "size": 800,
+      "blipSize": 12
+    },
+    "social": [
+    ],
+    "imprint": "",
+    "labels": {
+      "title": "Технический радар компании Будущее 2.0",
+      "imprint": "",
+      "quadrant": "Технические области",
+      "quadrantOverview": "Подробнее",
+      "zoomIn": "Приблизить",
+      "filterByTag": "Отфильтровать по тегу",
+      "footer": "Учебный радар для виртуальной медицинской компании Будущее 2.0",
+      "notUpdated": "Давно не менялось",
+      "notFound": "404",
+      "pageAbout": "Как пользоваться",
+      "pageOverview": "Обзор технологий",
+      "pageSearch": "Поиск",
+      "searchPlaceholder": "Что ищете?",
+      "metaDescription": "Технологический радар для планирования миграции в облако и внедрения Data Mesh"
+    },
+    "footer": "Учебный радар для виртуальной медицинской компании Будущее 2.0"
+  }

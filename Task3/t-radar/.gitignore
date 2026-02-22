@@ -1,0 +1,7 @@
+# Temp files
+.techradar
+about.md
+build/
+custom.css
+package-lock.json
+node_modules/
